@@ -48,7 +48,7 @@ public class Registraion {
         System.out.println("Enter the Email id");
         String email = sc.next();
         // Checking Email id is correct format or not
-        boolean result = Pattern.matches("^[A-Za-z0-9+_.-]+@(.+)$", email);
+        boolean result = Pattern.matches("^[0-9a-zA-Z]+([._+-][0-9a-zA-Z]+)*[@][0-9A-Za-z]+([.][a-zA-Z]{2,4})*$", email);
         // if it will true the valid otherwise invalid
         if (result) {
             System.out.println("Valid Input");
