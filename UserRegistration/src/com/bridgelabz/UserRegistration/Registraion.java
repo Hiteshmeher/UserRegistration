@@ -14,9 +14,28 @@ public class Registraion {
          * second and third small, this is minimum requirement
          * and having minimum 3 character
          */
-        boolean result1 = Pattern.matches("[A-Z][a-z]{2,}", FirstName);
+        boolean result = Pattern.matches("[A-Z][a-z]{2,}", FirstName);
         // if it will true the valid otherwise invalid
-        if (result1) {
+        if (result) {
+            System.out.println("Valid Input");
+        } else {
+            System.out.println("Sorry . Invalid Input");
+        }
+        sc.close();
+    }
+    public static void validLastName() {
+        Scanner sc = new Scanner(System.in);
+        // Taking Last name from user
+        System.out.println("Enter the Last Name");
+        String LastName = sc.next();
+        /**
+         * Checking Whether Last name contains first letter Capital
+         * second and third small, this is minimum requirement
+         * and having minimum 3 character
+         */
+        boolean result = Pattern.matches("[A-Z][a-z]{2,}", LastName);
+        // if it will true the valid otherwise invalid
+        if (result) {
             System.out.println("Valid Input");
         } else {
             System.out.println("Sorry . Invalid Input");
