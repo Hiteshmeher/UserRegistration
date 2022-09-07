@@ -88,5 +88,4 @@ public class Registraion {
         }
         sc.close();
     }
-
 }
