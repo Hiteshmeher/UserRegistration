@@ -42,4 +42,19 @@ public class Registraion {
         }
         sc.close();
     }
+    public static void validEmail() {
+        Scanner sc = new Scanner(System.in);
+        // Taking Email id from user
+        System.out.println("Enter the Email id");
+        String email = sc.next();
+        // Checking Email id is correct format or not
+        boolean result = Pattern.matches("^[A-Za-z0-9+_.-]+@(.+)$", email);
+        // if it will true the valid otherwise invalid
+        if (result) {
+            System.out.println("Valid Input");
+        } else {
+            System.out.println("Sorry . Invalid Input");
+        }
+        sc.close();
+    }
 }
