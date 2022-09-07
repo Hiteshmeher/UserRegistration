@@ -79,7 +79,7 @@ public class Registraion {
         System.out.println("Enter the Password");
         String password = sc.next();
         // Checking Password is of 8 char and at least 1 Uppercase
-        boolean result = Pattern.matches("^[A-Za-z0-9\\\\d@._-]{8,}$", password);
+        boolean result = Pattern.matches("^(?=.{8,}$)(?=.*?[A-Z]).*$", password);
         // if it will true the valid otherwise invalid
         if (result) {
             System.out.println("Valid Input");
