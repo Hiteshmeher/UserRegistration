@@ -3,21 +3,22 @@ package com.bridgelabz.UserRegistration;
 import java.util.Scanner;
 
 public class UserRegistrationMain {
-    Registraion reg = new Registraion();
     static Scanner sc = new Scanner(System.in);
     public static void main(String[] args) {
         System.out.println("*** Welcome to User Registration problem ***");
         int choose;
         int select;
-        while (true) {
-            System.out.print("Press 1 for validate First Name ");
+            System.out.print("PRESS for Validation \n1.First Name\n2.Last Name ");
             choose = sc.nextInt();
-            if (choose == 1) {
-                Registraion.validFirstName();
-                break;
-            } else {
-                System.out.println("Invalid: Enter valid details.");
+            switch (choose){
+                case 1:
+                    Registraion.validFirstName();
+                    break;
+                case 2:
+                    Registraion.validLastName();
+                    break;
+                default :
+                    break;
             }
         }
     }
-}
