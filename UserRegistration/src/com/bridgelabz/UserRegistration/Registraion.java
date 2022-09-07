@@ -73,4 +73,19 @@ public class Registraion {
         }
         sc.close();
     }
+    public static void validPassword() {
+        Scanner sc = new Scanner(System.in);
+        // Taking Password from user
+        System.out.println("Enter the Password");
+        String password = sc.next();
+        // Checking Password is of 8 char or not
+        boolean result = Pattern.matches("^[A-Za-z0-9\\\\d@._-]{8,}$", password);
+        // if it will true the valid otherwise invalid
+        if (result) {
+            System.out.println("Valid Input");
+        } else {
+            System.out.println("Sorry . Invalid Input");
+        }
+        sc.close();
+    }
 }
