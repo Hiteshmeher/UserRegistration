@@ -57,4 +57,20 @@ public class Registraion {
         }
         sc.close();
     }
+
+    public static void validPhoneNumber() {
+        Scanner sc = new Scanner(System.in);
+        // Taking Phone Number from user
+        System.out.println("Enter the Phone Number");
+        String phoneNumber = sc.next();
+        // Checking Phone Number is correct format or not
+        boolean result = Pattern.matches("^\\d{2}\\s?\\d{10,}$", phoneNumber);
+        // if it will true the valid otherwise invalid
+        if (result) {
+            System.out.println("Valid Input");
+        } else {
+            System.out.println("Sorry . Invalid Input");
+        }
+        sc.close();
+    }
 }

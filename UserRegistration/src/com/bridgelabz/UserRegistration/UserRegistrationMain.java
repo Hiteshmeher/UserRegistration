@@ -8,7 +8,7 @@ public class UserRegistrationMain {
         System.out.println("*** Welcome to User Registration problem ***");
         int choose;
         int select;
-            System.out.print("PRESS for Validation \n1.First Name\n2.Last Name\n3.Email ");
+            System.out.print("PRESS for Validation \n1.First Name\n2.Last Name\n3.Email\n4.Phone Number ");
             choose = sc.nextInt();
             switch (choose){
                 case 1:
@@ -19,6 +19,9 @@ public class UserRegistrationMain {
                     break;
                 case 3 :
                     Registraion.validEmail();
+                    break;
+                case 4:
+                    Registraion.validPhoneNumber();
                     break;
                 default :
                     break;
